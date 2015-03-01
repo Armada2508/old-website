@@ -7,6 +7,8 @@ $(document).on('click', '.ajax', function()  {
 	loadPage($(this).attr('href').substr(1));
 });
 
+loadPage('home');
+
 function loadPage(page) {
   var path = page;
 
@@ -33,10 +35,6 @@ function loadPage(page) {
     updateLinks();
   });
 }
-
-$(document).on("scroll", function() {
-  console.log($(".about-members").attr("href"));
-})
 
 function updateLinks() {
   var path = getPath();
